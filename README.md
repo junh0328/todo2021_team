@@ -32,7 +32,13 @@
    > > 속성으로 id(인덱스) / text(글) / checked (체크여부) 를 부여한다.
    > > TodoList의 props로 todos를 넘겨준다.
 
-2. TodoList 에서 props로 받아 온 todos를 매핑하여 TodoListItem에 넘겨 준다.
+2. TodoList 에서 props로 받아 온 todos를 매핑하기
+
    > > TodoListItem에는 props로 todo={todo}와 key={todo.id}를 넘겨준다.
    > > 이 todo는 todos를 매핑하여 하나하나 나타내는 todo 객체 한 개 한 개를 의미한다.
    > > key 는 id 값으로 mapping할 때 기본적으로 주어줘야 하는 값인데, todos 객체를 만들 때 설정해 주었다.
+
+3. TodoInsert에서 value 상태 관리하기
+
+   > > App.js 에서 임시로 onInsert()라는 함수를 만들어 TodoInsert에게 props로 넘겨준다.
+   > > TodoInsert에서는 props로 넘겨받은 onInsert()릁 통해서 value 값을 통제하고, onChange() 함수를 만들어 value값을 입력할 수 있도록 한다.

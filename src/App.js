@@ -22,10 +22,12 @@ function App() {
     },
   ]);
 
+  const onInsert = () => {};
+
   return (
     <div>
       <TodoTemplate>
-        <TodoInsert />
+        <TodoInsert onInsert={onInsert} />
         <TodoList todos={todos} />
       </TodoTemplate>
     </div>
