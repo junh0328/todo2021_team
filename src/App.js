@@ -1,14 +1,14 @@
-import Todoinsert from "./components/Todoinsert";
+import TodoInsert from "./components/TodoInsert";
 import TodoList from "./components/TodoList";
-import Todotemplate from "./components/Todotemplate";
+import TodoTemplate from "./components/TodoTemplate";
 
 function App() {
   return (
     <div>
-      <Todotemplate>
-        <Todoinsert />
+      <TodoTemplate>
+        <TodoInsert />
         <TodoList />
-      </Todotemplate>
+      </TodoTemplate>
     </div>
   );
 }
