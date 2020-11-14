@@ -10,3 +10,4 @@
    > > children으로 TodoInsert.js / TodoList.js 를 받음
 
 3. TodoInsert 구성
+   > > form 태그를 통해 input / submit button을 만들었다.
