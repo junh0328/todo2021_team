@@ -8,9 +8,14 @@ const Todoinsert = ({ onInsert }) => {
   const onChange = (e) => {
     setValue(e.target.value);
   };
+  const onSubmit = (e) => {
+    onInsert(value);
+    setValue("");
+    e.preventDefault();
+  };
 
   return (
-    <form className="TodoInsert">
+    <form className="TodoInsert" onSubmit={onSubmit}>
       <input
         type="text"
         placeholder="할 일을 입력하세요"

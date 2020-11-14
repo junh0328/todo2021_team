@@ -42,3 +42,10 @@
 
    > > App.js 에서 임시로 onInsert()라는 함수를 만들어 TodoInsert에게 props로 넘겨준다.
    > > TodoInsert에서는 props로 넘겨받은 onInsert()릁 통해서 value 값을 통제하고, onChange() 함수를 만들어 value값을 입력할 수 있도록 한다.
+
+4. todos 배열에 새로운 객체를 추가하기
+
+   > > App 컴포넌트에서 todos 배열에 새 객체를 추가하는 onInsert 함수를 만든다.
+   > > 새로운 객체를 만들 때마다 id를 추가해줘야 하므로, useRef를 사용하여 관리한다.
+
+5. TodoInsert에서 onSubmit 이벤트 설정하기
