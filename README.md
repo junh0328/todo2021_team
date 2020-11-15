@@ -49,3 +49,4 @@
    > > 새로운 객체를 만들 때마다 id를 추가해줘야 하므로, useRef를 사용하여 관리한다.
 
 5. TodoInsert에서 onSubmit 이벤트 설정하기
+   > > useState로 관리하였던 todos 배열을 todoList에서 매핑하여 todoListItem에 props로 전달하게 되는데, 이 todo를 하나 추가할 때마다 todos에 concat(todo)로 넣어주어야 한다.
