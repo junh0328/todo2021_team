@@ -77,3 +77,7 @@
    > > TodoListItem에서 넘겨 받은 onRemove 함수를 사용합니다. 이미 onRemove를 사용할 때 비구조화 할당을 통해 id를 props로 추가했기 때문에, MdCheckBox와 MdCheckBoxOutlineBlank를 감싸고 있는 div에 onToggle 함수를 추가합니다.
 
    > > onClick이 되면 해당 onToggle 함수를 실행할 수 있도록 합니다.
+
+8. useCallvack Hook을 사용하여 재사용 가능 함수 만들기
+
+   > > 기존 리렌더링이 되는 함수들을 useCallback으로 감싸고, 해당 상황에만 렌더링 될 수 있도록 [] 에 해당 값을 넣어줍니다.
