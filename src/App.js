@@ -34,11 +34,15 @@ function App() {
     nextId.current += 1;
   };
 
+  const onRemove = (id) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  };
+
   return (
     <div>
       <TodoTemplate>
         <TodoInsert onInsert={onInsert} />
-        <TodoList todos={todos} />
+        <TodoList todos={todos} onRemove={onRemove} />
       </TodoTemplate>
     </div>
   );

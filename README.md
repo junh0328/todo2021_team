@@ -47,6 +47,21 @@
 
    > > App 컴포넌트에서 todos 배열에 새 객체를 추가하는 onInsert 함수를 만든다.
    > > 새로운 객체를 만들 때마다 id를 추가해줘야 하므로, useRef를 사용하여 관리한다.
+   > > 기존에 3가지의 todos를 작성했으므로, 다음 id를 부여하기 위해 useRef는 4를 사용한다.
 
 5. TodoInsert에서 onSubmit 이벤트 설정하기
-   > > useState로 관리하였던 todos 배열을 todoList에서 매핑하여 todoListItem에 props로 전달하게 되는데, 이 todo를 하나 추가할 때마다 todos에 concat(todo)로 넣어주어야 한다.
+
+   > > App.js에서 useState로 관리하였던 todos 배열을 todoList에서 매핑하여 todoListItem에 props로 전달하게 되는데, 이 todo를 하나 추가할 때마다 todos에 concat(todo)로 넣어주어야 한다.
+   > > 따라서 TodoInsert에서 onSubmit 함수가 발생할 때 마다 App.js에서 만든 onInsert 기능을 props로 받아와 실행하게 된다.
+   > > onInsert 함수에는 id 값과, value로 넘어오는 text 그리고 check 유무를 받아오게 되고, 앞서 말한 useState 문의 setTodos를 통해 todos 배열에 작성한 todo를 추가하고, id를 1 올려주며 마무리한다.
+   > > form 태그 내부에서 button onclick={onclick}과 같이 버튼에 onclick을 주는 것이 아닌 form의 onSubmit 속성을 사용하는 이유는, 마우스의 클릭 이벤트뿐만 아니라, Enterkey의 입력 또한 받기 위해서 입니다.
+
+6. 지우기 기능 구현하기
+
+   > > App.js 에서 filter 내장 함수를 사용하여 onRemove 함수를 만듭니다. onRemove 함수는 id 를 파라미터로 받아와서 선택한 id 와 해당 id가 같은 todo를 지우고 나머지 todo를 보여줍니다.
+
+   > > TodoList에게 props로 전달해줍니다. 실제로 사용되는 곳은 TodoListItem 입니다.
+
+   > > App에게 받은 onRemove props를 TodoListItem에게 넘겨줍니다.
+
+   > > TodoListItem에서 넘겨 받은 onRemove 함수를 사용합니다. 기존에 비구조화 할당을 통해 전달받은 todo에 id props를 추가합니다. 이 id를 통해 TodoListItem은 클릭시에 해당 id에 따른 onRemove 함수를 발생시킵니다.
