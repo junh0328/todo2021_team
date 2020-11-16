@@ -64,4 +64,16 @@
 
    > > App에게 받은 onRemove props를 TodoListItem에게 넘겨줍니다.
 
-   > > TodoListItem에서 넘겨 받은 onRemove 함수를 사용합니다. 기존에 비구조화 할당을 통해 전달받은 todo에 id props를 추가합니다. 이 id를 통해 TodoListItem은 클릭시에 해당 id에 따른 onRemove 함수를 발생시킵니다.
+   > > TodoListItem에서 넘겨 받은 onRemove 함수를 사용합니다. 기존에 비구조화 할당을 통해 전달받은 todo에 id props를 추가합니다. 이 id를 통해 TodoListItem은 클릭시에 해당 id에 따른 onRemove 함수를 발생시킵니다. => !todo.checked
+
+7. 토글을 통해 ListItem 수정하기
+
+   > > App.js 에서 map 내장 함수를 사용하여 onToggle 함수를 만듭니다. onToggle 함수는 id를 파라미터로 받아와서 선택한 todo의 id와 id가 같은 todo를 spread 함수로 가져와서 todo의 키인 checked 를 반전시킵니다.
+
+   > > TodoList에게 props로 전달해줍니다. 실제로 사용되는 곳은 TodoListItem 입니다.
+
+   > > App에게 받은 onToggle props를 TodoListItem에게 넘겨줍니다.
+
+   > > TodoListItem에서 넘겨 받은 onRemove 함수를 사용합니다. 이미 onRemove를 사용할 때 비구조화 할당을 통해 id를 props로 추가했기 때문에, MdCheckBox와 MdCheckBoxOutlineBlank를 감싸고 있는 div에 onToggle 함수를 추가합니다.
+
+   > > onClick이 되면 해당 onToggle 함수를 실행할 수 있도록 합니다.
