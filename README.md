@@ -78,6 +78,6 @@
 
    > > onClick이 되면 해당 onToggle 함수를 실행할 수 있도록 합니다.
 
-8. useCallvack Hook을 사용하여 재사용 가능 함수 만들기
+8. useCallback Hook을 사용하여 재사용 가능 함수 만들기
 
    > > 기존 리렌더링이 되는 함수들을 useCallback으로 감싸고, 해당 상황에만 렌더링 될 수 있도록 [] 에 해당 값을 넣어줍니다.
